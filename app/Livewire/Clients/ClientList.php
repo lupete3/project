@@ -9,6 +9,7 @@ use App\Models\Client;
 class ClientList extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $search = '';
 

@@ -9,6 +9,7 @@ use App\Models\Client;
 class InvoiceList extends Component
 {
     use \Livewire\WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $search = '';
 

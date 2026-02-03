@@ -9,6 +9,7 @@ use App\Models\Project;
 class ProjectList extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $search = '';
     public $status = '';
