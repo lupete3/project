@@ -56,6 +56,13 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/invoices/{invoice}/edit', [App\Http\Controllers\InvoiceController::class, 'edit'])->name('invoices.edit')->where('invoice', '[0-9]+');
   Route::get('/invoices/{invoice}/download', [App\Http\Controllers\InvoiceController::class, 'download'])->name('invoices.download')->where('invoice', '[0-9]+');
 
+  // Quotes
+  Route::get('/quotes', [App\Http\Controllers\QuoteController::class, 'index'])->name('quotes.index');
+  Route::get('/quotes/create', [App\Http\Controllers\QuoteController::class, 'create'])->name('quotes.create');
+  Route::get('/quotes/{quote}', [App\Http\Controllers\QuoteController::class, 'show'])->name('quotes.show')->where('quote', '[0-9]+');
+  Route::get('/quotes/{quote}/edit', [App\Http\Controllers\QuoteController::class, 'edit'])->name('quotes.edit')->where('quote', '[0-9]+');
+  Route::get('/quotes/{quote}/download', [App\Http\Controllers\QuoteController::class, 'download'])->name('quotes.download')->where('quote', '[0-9]+');
+
   // Renewals
   Route::get('/renewals', [App\Http\Controllers\RenewalController::class, 'index'])->name('renewals.index');
   Route::get('/renewals/create', [App\Http\Controllers\RenewalController::class, 'create'])->name('renewals.create');

@@ -43,6 +43,11 @@ class Project extends Model
         return $this->hasMany(Task::class);
     }
 
+    public function quotes(): HasMany
+    {
+        return $this->hasMany(Quote::class);
+    }
+
     public function expenses(): HasMany
     {
         return $this->hasMany(Expense::class);

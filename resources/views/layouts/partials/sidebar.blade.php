@@ -83,6 +83,13 @@
                 </a>
             </li>
             <li class="menu-item">
+                <a class="menu-link {{ request()->routeIs('quotes.*') ? 'active' : '' }}"
+                    href="{{ route('quotes.index') }}">
+                    <span class="material-symbols-outlined menu-icon">request_quote</span>
+                    <span class="title">Devis</span>
+                </a>
+            </li>
+            <li class="menu-item">
                 <a class="menu-link {{ request()->routeIs('finances.*') ? 'active' : '' }}"
                     href="{{ route('finances.index') }}">
                     <span class="material-symbols-outlined menu-icon">payments</span>
